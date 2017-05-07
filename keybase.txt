@@ -1,0 +1,72 @@
+==================================================================
+https://keybase.io/olidroide
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://olidroide.es
+  * I am olidroide (https://keybase.io/olidroide) on keybase.
+  * I have a public key with fingerprint F41E 83EC 5A45 36A9 4558  5305 E6BC D3A3 4721 74F6
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0101d429533bf781e31f1e56367af5f0da0155c910e9ec3b517f2ae4ba21fbba38c40a",
+            "fingerprint": "f41e83ec5a4536a945585305e6bcd3a3472174f6",
+            "host": "keybase.io",
+            "key_id": "e6bcd3a3472174f6",
+            "kid": "0101d429533bf781e31f1e56367af5f0da0155c910e9ec3b517f2ae4ba21fbba38c40a",
+            "uid": "d2a223932ed573dca96c829ff187df19",
+            "username": "olidroide"
+        },
+        "service": {
+            "hostname": "olidroide.es",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1494172470,
+    "expire_in": 157680000,
+    "prev": "def022909db53a01aed066048ce16e0b1c1623e07085dfa1eac7aa9d94df0e1d",
+    "seqno": 10,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+
+owGtUmtMHFUYZYFFQJGHJTGh0jItBnQlc+c9/CEKtrQUKYk0vOI6jzvLBHZmOzu7
+FKoGA0KLUijSx7am0mJNU0CMaCWl4VFISxEj26ZiaokR21IKaoAWLX3gDNE/xp/e
+P1/ud88595wvX1NEUECo5da5K22bE/QlyzczfEBBZHrqboRXxQrEqKVwtcAyEbp1
+e6ksIqkIClAgEhhL4jgv0QyAOJAAJCmcojmJlFCRQwFJCixAIQsFnCcBLWEcJHgO
+AxLPczgjECiH2BBJVhxQc2myohuyEgEgg0OB5AgSpziWIEmGxFESUrwg4hxO0Big
+CYkyiCWq22QY5njODVNk1egZF/uqvf/A/8++PatyIsZhGM7iGBRJGhcFjqUEBmMl
+CTC0KAHWBLqhpnBOaKDVMlnUVFmEyNs2xGh7ZQGakzWj/BuSAt0G2aWpuiqoZcZL
+ia67Uk2iXuEykeWQt/+tYedlRTTmaBC8UHPLqoKkAgMp6LIpCgiWADRG0KgNgbtc
+sgbtsokgaYpBjWN+A71mGiihGMYWoKzIk7gxCQ6KKEWhBCNAQEGUBwKgMByiNMqQ
+osQByAk0x7EiS4gSCoGImLF2KqohbqjqnMMQdcsOhdM9mhE6fG/g2uAAS2hAiDXQ
+XLGA8LCof/ZuwBq5Ag+0fkDXTGqRe6r1Q/4524w4++s9JSGy1196Mxne3TEcmDK4
+y3NrS3F8WtbjRX59U4XmXZQvTo95InpPd/b9geeBg2L/nvIvWyo76nJIX854ceam
+mCpr2DtDH36RPRrRsPyoOzDqt7hz88jrrStWtWbh40sRvBRi66nY8mLtiaW2DteS
+E0Y1JZ3Yt2O753237VJLvf1qcvyni2FBnRk/3T6vwe5oByjs+7b98DaLWpD9ZtvF
+/MniopjBbSMT/amXbRmfnWooGrvS84Iz7QEzcZNszaSiPT9o9+I++vzPC+/daLz2
+/cns5JFKqXo+IW4w/mjr0DPjRWt+jqGWBz6J9UFi4cf8Fd/U0/LJwcSRkieaY/YV
+Fkx3Op33a933vQOH5TGFGW1xvbZBORo0F+pv+fr3u43RhQ21U0vJNzJP5TYeWnfH
+7q0/xvmFhdwDziNbu+qUuazruZtOd9QNN/S9TIb+UjhAX03ow0Z7puErDy9Evzrh
+eFCDVuZV5T03WRL+Vstw+tngxjLy7BoiNmOvGtIRu+HRUxtrKhLLH7av9eiTSVm9
+677bubk8vzJpqHv2+eYgzwzadWR/cJz/TmV/83JM4P6crxL79PVnzlcNjz5rtSz0
+WOJ8A+xLx2+nqe3vXr5ufTLd11X/RhMyS4wPXptSqn1lDfMbq/sf7+52HIw/k5J/
+7C8=
+=aa1B
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/olidroide
+
+==================================================================
