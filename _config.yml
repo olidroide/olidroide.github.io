@@ -1,88 +1,38 @@
-#
-# This file contains configuration flags to customize your site
-#
+baseurl: ''
+exclude: ['README.md']
+permalink: pretty
+title: 'olidroide 📱 Lead Software Engineer @cheerfy'
 
-# Name of your site (displayed in the header)
-name: olidroide
+google_analytics_id: ""
+homepage:
+  show_call_box: true
+logo:
+  mobile: "images/logo/logo-mobile.svg"
+  desktop: "images/logo/logo.svg"
+  desktop_height: "36px"
+footer:
+  copyright_text: 'Free Jekyll theme by <a class="zerostatic" href="https://www.zerostatic.io">www.zerostatic.io</a>'
 
-# Short bio or description (displayed in the header)
-description: Android Developer & Bollywood Dancer
+seo:
+  meta_og_title: "olidroide"
+  meta_og_type: "website"
+  meta_og_url: "https://olidroide.es"
+  meta_og_image: "https://raw.githubusercontent.com/zerostaticthemes/jekyll-serif-theme/master/screenshots/tn.png"
+  meta_og_description: "olidroide 📱Lead Software Engineer @cheerfy 🕺 Continuous Bollywood Dancer 🎸 Guitar Driven Development"
+  meta_twitter_card: "summary"
+  meta_twitter_site: "@olidroide"
+  meta_twitter_creator: "@olidroide"
 
-# URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: https://avatars2.githubusercontent.com/u/411779
+collections:
+  services:
+    output: true
+  team:
+    output: false
 
-#
-# Flags below are optional
-#
-
-# Includes an icon in the footer for each username you enter
-footer-links:
-  dribbble:
-  email: olidroide@gmail.com
-  facebook:
-  flickr:
-  github: olidroide
-  instagram:
-  linkedin: olidroide
-  pinterest:
-  rss: # just type anything here for a working RSS icon
-  twitter: olidroide
-  stackoverflow: users/481637/olidroide
-  youtube: user/olidroide
-  googleplus: +OliverMasOtero
-
-
-# Enter your Disqus shortname (not your username) to enable commenting on posts
-# You can find your shortname on the Settings page of your Disqus account
-disqus:
-
-# Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
-google_analytics:
-
-# Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
-# Used for Sitemap.xml and your RSS feed
-url: http://olidroide.es
-
-# If you're hosting your site at a Project repository on GitHub pages
-# (http://yourusername.github.io/repository-name)
-# and NOT your User repository (http://yourusername.github.io)
-# then add in the baseurl here, like this: "/repository-name"
-baseurl: ""
-
-#
-# !! You don't need to change any of the configuration flags below !!
-#
-
-markdown: kramdown
-highlighter: rouge
-permalink: /:title/
-
-# The release of Jekyll Now that you're using
-version: v1.2.0
-
-# Jekyll 3 now only supports Kramdown for Markdown
-kramdown:
-  # Use GitHub flavored markdown, including triple backtick fenced code blocks
-  input: GFM
-  # Jekyll 3 and GitHub Pages now only support rouge for syntax highlighting
-  syntax_highlighter: rouge
-  syntax_highlighter_opts:
-    # Use existing pygments syntax highlighting css
-    css_class: 'highlight'
-
-# Set the Sass partials directory, as we're using @imports
 sass:
-  style: :expanded # You might prefer to minify using :compressed
+  indentWidth: 4
+  style: compact # possible values: nested expanded compact compressed
+  precision: 10
 
-# Use the following plug-ins
-gems:
-  - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
-  - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
-
-# Exclude these files from your production _site
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - LICENSE
-  - README.md
-  - CNAME
+plugins:
+  - jekyll-environment-variables

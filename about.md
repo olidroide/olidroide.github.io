@@ -1,6 +1,8 @@
 ---
+title: 'About'
+date: 2021-01-29T17:01:34+07:00
 layout: page
-title: About
+bodyClass: page-about
 permalink: /about/
 ---
 
@@ -24,4 +26,4 @@ Actualmente estoy trabajando en [Cheerfy](http://cheerfy.com/) una startup muy p
 
 ### Contacto
 
-[olidroide@gmail.com](mailto:olidroide@gmail.com)
+[hola@olidroide.es](mailto:hola@olidroide.es)
