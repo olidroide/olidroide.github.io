@@ -1,17 +1,17 @@
 [
   {
-    "title": "Free Consultation",
-    "description": "New clients receive an obligation free consultation.",
+    "title": "Clean Code",
+    "description": "My obsession is stay updated and use last versions of everything. Also use all Software Libre than I can use in my daily work(Android, Git, Inkscape, Gimp, Manjaro, VSCode, …)",
     "image": "images/features/noun_branding_1885335.svg"
   },
   {
-    "title": "Certified Accountants",
-    "description": "All members of our team are certified accountants.",
+    "title": "Python & Android",
+    "description": "Developer since 2010",
     "image": "images/features/noun_The Process_1885341.svg"
   },
   {
-    "title": "Tax Compliance",
-    "description": "We stay up to date on the latest changes to the tax code.",
+    "title": "Bollywood & Guitar",
+    "description": "And more hobbies around my head",
     "image": "images/features/noun_3d modeling_1885342.svg"
   }
 ]

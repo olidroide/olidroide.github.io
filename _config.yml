@@ -5,7 +5,7 @@ title: 'olidroide 📱 Lead Software Engineer @cheerfy'
 
 google_analytics_id: ""
 homepage:
-  show_call_box: true
+  show_call_box: false
 logo:
   mobile: "images/logo/logo-mobile.svg"
   desktop: "images/logo/logo.svg"
@@ -25,7 +25,7 @@ seo:
 
 collections:
   services:
-    output: true
+    output: false
   team:
     output: false
 

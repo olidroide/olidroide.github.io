@@ -6,7 +6,7 @@ main:
   #   url: "/team/"
   #   weight: 3
   - name: "CV"
-    url: "/https://cv.olidroide.es/"
+    url: "https://cv.olidroide.es/"
     weight: 3
   - name: "About"
     url: "/about/"
