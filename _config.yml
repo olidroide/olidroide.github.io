@@ -1,4 +1,4 @@
-baseurl: ''
+baseurl: '/olidroide.github.io'
 exclude: ['README.md']
 permalink: pretty
 title: 'olidroide 📱 Lead Software Engineer @cheerfy'
@@ -11,7 +11,7 @@ logo:
   desktop: "images/logo/oli_logo.svg"
   desktop_height: "36px"
 footer:
-  copyright_text: 'Free Jekyll theme by <a class="zerostatic" href="https://www.zerostatic.io">www.zerostatic.io</a>'
+  copyright_text: 'Jekyll theme by <a class="zerostatic" href="https://www.zerostatic.io">www.zerostatic.io</a>'
 
 seo:
   meta_og_title: "olidroide"

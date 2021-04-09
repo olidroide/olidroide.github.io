@@ -9,4 +9,4 @@ intro_image_hide_on_mobile: true
 
 # Developer since 2010.
 
-Software engineer specialized in Android & Python and focused in write the best clean code and use design patterns.
+Software engineer specialized in Python & Android and focused in write clean code and use design patterns.
