@@ -1,17 +1,17 @@
 [
   {
     "title": "Clean Code",
-    "description": "My obsession is stay updated and use last versions of everything. Also use all Software Libre than I can use in my daily work(Android, Git, Inkscape, Gimp, Manjaro, VSCode, …)",
+    "description": "My obsession is stay updated and use last versions of everything.",
     "image": "images/features/noun_branding_1885335.svg"
   },
   {
-    "title": "Python & Android",
-    "description": "Developer since 2010",
+    "title": "Software Libre",
+    "description": "Use all Software Libre than I can use in my daily work(Android, Git, Inkscape, Gimp, Manjaro, VSCode, …).",
     "image": "images/features/noun_The Process_1885341.svg"
   },
   {
     "title": "Bollywood & Guitar",
-    "description": "And more hobbies around my head",
+    "description": "Also Ukelele and more hobbies around my head.",
     "image": "images/features/noun_3d modeling_1885342.svg"
   }
 ]
