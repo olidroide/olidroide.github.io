@@ -1,7 +1,7 @@
 baseurl: ''
 exclude: ['README.md']
 permalink: pretty
-title: 'olidroide 📱 Lead Software Engineer @cheerfy'
+title: 'olidroide 📱 Lead Software Engineer @InnoIT'
 
 google_analytics_id: ""
 homepage:
@@ -18,7 +18,7 @@ seo:
   meta_og_type: "website"
   meta_og_url: "https://olidroide.es"
   meta_og_image: "https://raw.githubusercontent.com/zerostaticthemes/jekyll-serif-theme/master/screenshots/tn.png"
-  meta_og_description: "olidroide 📱Lead Software Engineer @cheerfy 🕺 Continuous Bollywood Dancer 🎸 Guitar Driven Development"
+  meta_og_description: "olidroide 📱 Lead Software Engineer @InnoIT 🕺 Continuous Bollywood Dancer 🎸 Uke Driven Development"
   meta_twitter_card: "summary"
   meta_twitter_site: "@olidroide"
   meta_twitter_creator: "@olidroide"

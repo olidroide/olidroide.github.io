@@ -1,6 +1,6 @@
 ---
 title: 'About'
-date: 2021-01-29T17:01:34+07:00
+date: 2022-01-27T09:01:34+07:00
 layout: page
 bodyClass: page-about
 permalink: /about/
@@ -22,7 +22,9 @@ Seguí aprendiendo más en [We2](http://we2.com/) y aquí no solamente de códig
 
 Es muy gratificante trabajar y formar parte del equipo de una de esas apps que usas desde hace tiempo. Eso es lo que me pasó con [Weplan](http://weplan-app.com/).
 
-Actualmente estoy trabajando en [Cheerfy](http://cheerfy.com/) una startup muy pequeñita que empezó como _side project_ hace un año.
+Aprendí Python durante mi paso en [Cheerfy](http://cheerfy.com/) una startup muy pequeñita que empezó como _side project_ en los ratos libres y que me mantuvo durante 5 años.
+
+Ahora mismo trabajo en [Innoit](https://www.inno-it.es/) en un proyecto de Telefónica.
 
 ### Contacto
 
