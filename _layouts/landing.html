@@ -1,0 +1,152 @@
+{%- assign t = site.data[page.lang] -%}
+<!DOCTYPE html>
+<html lang="{{ page.lang }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#000000">
+{% seo %}
+<link rel="alternate" hreflang="es" href="https://olidroide.es/">
+<link rel="alternate" hreflang="en" href="https://olidroide.es/en/">
+<link rel="alternate" hreflang="x-default" href="https://olidroide.es/">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/press-start-2p.woff2">
+<link rel="stylesheet" href="/assets/css/site.css">
+<script type="application/ld+json" data-cfasync="false">
+{"@context":"https://schema.org","@type":"Person","name":"Oliver Mas Otero","alternateName":"olidroide","jobTitle":"Principal Engineer · AI Solutions Architect · Technical Lead","url":"https://olidroide.es/","image":"https://olidroide.es/assets/img/avatar.jpg","address":{"@type":"PostalAddress","addressLocality":"Madrid","addressCountry":"ES"},"knowsLanguage":["es","en"],"sameAs":["https://www.linkedin.com/in/olidroide/","https://github.com/olidroide"]}
+</script>
+</head>
+<body>
+<script data-cfasync="false">document.documentElement.classList.add('js')</script>
+
+<header class="hero" id="hero">
+  <canvas id="sky" aria-hidden="true"></canvas>
+  <canvas id="pix" aria-hidden="true"></canvas>
+  <div class="topbar">
+    <nav class="lang px" aria-label="{{ t.hero.lang_aria }}"><b aria-current="page">{{ t.label }}</b> · <a href="{{ t.alt.url }}" hreflang="{{ t.alt.lang }}" lang="{{ t.alt.lang }}">{{ t.alt.label }}</a></nav>
+  </div>
+  <div class="hero-copy" id="copy">
+    <h1 class="sr">{{ t.hero.h1 }}</h1>
+    <p class="role px">{{ t.hero.role_1 }}<br>{{ t.hero.role_2 }}</p>
+    <span class="badge"><i></i>{{ t.hero.badge }}</span><br>
+    <a class="start px" href="#inicio">{{ t.hero.start }}</a>
+  </div>
+</header>
+
+<nav class="hud" id="hud" aria-label="{{ t.hud.aria }}">
+  <div class="hud-in">
+    <div class="face" aria-hidden="true"><canvas id="face" width="16" height="16"></canvas><b class="px">P1</b></div>
+    <div class="cell"><span class="lbl px">{{ t.hud.experience }}</span><span class="val px"><span id="years">00</span> {{ t.hud.years }}</span></div>
+    <div class="cell"><span class="lbl px">{{ t.hud.aws }}</span><span class="val px">{{ t.hud.aws_value }}</span></div>
+    <div class="cell" aria-hidden="true"><span class="lbl px">{{ t.hud.bugs }}</span><span class="val px" id="bugs">0000</span></div>
+    <div class="energy"><span class="lbl px">{{ t.hud.level }} <b id="world">START</b></span><div class="bar"><i id="bar"></i></div></div>
+  </div>
+</nav>
+
+<main>
+  <section id="inicio" class="wrap" data-world="{{ t.worlds.intro }}">
+    <div class="intro-grid">
+      <div>
+        <p class="kicker px">{{ t.intro.kicker }}</p>
+        <h2>{{ t.intro.h_1 }}<br><span class="grad">{{ t.intro.h_grad }}</span>,<br>{{ t.intro.h_2 }}</h2>
+        <p class="lead">{{ t.intro.lead }}</p>
+        <ul class="chips">
+          {% for c in t.intro.chips %}<li>{{ c }}</li>{% endfor %}
+        </ul>
+        <div class="ctas">
+          <a class="btn primary" href="https://www.linkedin.com/in/olidroide/" rel="me">{{ t.intro.linkedin }}</a>
+          <!--email_off--><a class="btn" href="mailto:hola@olidroide.es">hola@olidroide.es</a><!--/email_off-->
+        </div>
+      </div>
+      <figure class="avatar" id="avatar">
+        <div class="shot"><img id="avatarImg" src="/assets/img/avatar.jpg" alt="{{ t.intro.avatar_alt }}" width="800" height="800" decoding="async">
+        <canvas id="avatarFx" width="240" height="240" aria-hidden="true"></canvas></div>
+        <figcaption class="px">{{ t.intro.avatar_tag }}</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="logros" class="wrap" data-world="{{ t.worlds.logros }}">
+    <h2 class="sec px">{{ t.logros.title }}</h2>
+    <div class="grid4">
+      {%- for a in t.logros.items %}
+      <article class="ach">
+        {% if a.big %}<b class="big px">{{ a.big }}</b>{% else %}<span class="tag px">{{ a.tag }}</span>{% endif %}
+        <h3>{{ a.title }}</h3>
+        <p>{{ a.text }}</p>
+      </article>
+      {%- endfor %}
+    </div>
+  </section>
+
+  <section id="mundos" class="wrap" data-world="{{ t.worlds.mundos }}">
+    <h2 class="sec px">{{ t.mundos.title }}</h2>
+    <ol class="worlds">
+      {%- for w in t.mundos.items %}
+      <li class="world{% if w.now %} now{% endif %}" data-world="{{ w.world }}">
+        <div class="wt px">{{ w.wt }}</div>
+        <h3>{{ w.title }}</h3>
+        <p>{{ w.text }}</p>
+        <span class="stamp px">{{ w.stamp }}</span>
+      </li>
+      {%- endfor %}
+    </ol>
+  </section>
+
+  <section id="skills" class="wrap" data-world="{{ t.worlds.skills }}">
+    <h2 class="sec px">{{ t.lab.title }}</h2>
+    <p class="lab-note">{{ t.lab.note }}<span class="kbd-hint"> {{ t.lab.kbd_hint }} <span class="kbd">A W S E D F T G Y H U J K</span></span></p>
+    <div class="lab" id="lab">
+      <div class="oled" aria-live="polite"><b id="oledA">{{ t.js.oled.idle_a }}</b><small id="oledB">{{ t.js.oled.idle_b }}</small><span class="mb"><i id="oledV"></i></span></div>
+      <div class="knobs" id="knobs"></div>
+      <div class="faders" id="faders"></div>
+      <div class="pads" id="pads"></div>
+      <div class="keys" id="keys" role="group" aria-label="{{ t.lab.keys_aria }}"></div>
+      <div class="brand"><span>{{ t.lab.brand }}</span><small>{{ t.lab.brand_sub }}</small></div>
+    </div>
+  </section>
+
+  <section id="bonus" class="bonus" data-world="{{ t.worlds.bonus }}">
+    <div class="wrap">
+      <div class="bonus-grid">
+        <div>
+          <p class="kicker px">{{ t.bonus.kicker }}</p>
+          <h2>{{ t.bonus.h_1 }}<br><span class="uke-title">{{ t.bonus.h_2 }}</span></h2>
+          <p class="lead">{{ t.bonus.lead }}</p>
+        </div>
+        <div class="uke-card">
+          <canvas id="ukeArt" width="128" height="40" aria-hidden="true"></canvas>
+          <div class="chords" role="group" aria-label="{{ t.bonus.chords_aria }}">
+            <button class="chord" aria-pressed="true" data-ch="C">C</button><button class="chord" aria-pressed="false" data-ch="Am">Am</button><button class="chord" aria-pressed="false" data-ch="F">F</button><button class="chord" aria-pressed="false" data-ch="G">G</button>
+          </div>
+          <div class="strings" id="strings" role="group" aria-label="{{ t.bonus.strings_aria }}">
+            <button class="str" data-s="0" style="--w:2px">G</button><button class="str" data-s="1" style="--w:3px">C</button><button class="str" data-s="2" style="--w:2.5px">E</button><button class="str" data-s="3" style="--w:2px">A</button>
+          </div>
+        </div>
+      </div>
+      <figure class="stage" id="stage">
+        <video class="vh" id="vidH" muted loop playsinline preload="none" poster="/assets/video/uke-poster.jpg" data-full="/assets/video/uke.mp4" aria-label="{{ t.bonus.video_h_aria }}"><source src="/assets/video/uke.mp4" type="video/mp4"></video>
+        <video class="vv" id="vidV" muted loop playsinline preload="none" poster="/assets/video/reel-poster.jpg" data-full="/assets/video/reel.mp4" aria-label="{{ t.bonus.video_v_aria }}"><source src="/assets/video/reel-loop.mp4" type="video/mp4"></video>
+        <span class="ht" aria-hidden="true"></span>
+        <button class="snd px" id="snd" type="button" aria-pressed="false">{{ t.js.sound.on }}</button>
+        <figcaption id="cap">{{ t.js.captions.h }}</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="contacto" class="wrap contact" data-world="{{ t.worlds.contacto }}">
+    <p class="insert px">{{ t.contact.insert }}</p>
+    <h2>{{ t.contact.title }}</h2>
+    <p>{{ t.contact.line }}</p>
+    <div class="ctas">
+      <a class="btn primary" href="https://www.linkedin.com/in/olidroide/" rel="me">{{ t.contact.linkedin }}</a>
+      <!--email_off--><a class="btn" href="mailto:hola@olidroide.es">hola@olidroide.es</a><!--/email_off-->
+      <a class="btn" href="https://github.com/olidroide" rel="me">{{ t.contact.github }}</a>
+    </div>
+  </section>
+</main>
+
+<script type="application/json" id="i18n" data-cfasync="false">{{ t.js | jsonify }}</script>
+<script src="/assets/js/hero.js" data-cfasync="false"></script>
+<script src="/assets/js/lab.js" data-cfasync="false"></script>
+</body>
+</html>

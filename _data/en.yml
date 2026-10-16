@@ -1,0 +1,122 @@
+lang: en
+locale: en_US
+label: EN
+alt: { lang: es, url: /, label: ES }
+
+meta:
+  title: "olidroide · Oliver Mas · Principal Engineer · AI in production"
+  description: "Principal Engineer, AI Solutions Architect and Technical Lead with 16 years of experience. Generative AI in production, Python, FastAPI and AWS. 100% remote from Madrid."
+
+hero:
+  h1: "olidroide: Oliver Mas Otero, Principal Engineer, AI Solutions Architect and Technical Lead"
+  role_1: "PRINCIPAL ENGINEER"
+  role_2: "AI SOLUTIONS ARCHITECT · TECH LEAD"
+  badge: "Available · 100% remote"
+  start: "PRESS START"
+  lang_aria: "Language"
+
+hud:
+  aria: "Scoreboard"
+  experience: "EXPERIENCE"
+  years: "YEARS"
+  aws: "AWS SAVINGS"
+  aws_value: "-70%"
+  bugs: "BUGS FIXED"
+  level: "LEVEL"
+
+worlds: { intro: "INTRO", logros: "LOOT", mundos: "WORLDS", skills: "SKILLS", bonus: "BONUS", contacto: "CONTINUE?" }
+
+intro:
+  kicker: "PLAYER 1 · OLIVER MAS"
+  h_1: "Principal Engineer."
+  h_grad: "AI in production"
+  h_2: "not in slides."
+  lead: "16 years building critical software: from Android 1.5 in 2010 to generative AI platforms in regulated environments. Architecture, code and technical leadership, hands on the keyboard."
+  chips: ["Python", "FastAPI", "RAG", "Multi-agent", "AWS Bedrock", "PostgreSQL", "HTMX + SSE", "Hexagonal architecture"]
+  linkedin: "LinkedIn ↗"
+  avatar_alt: "Portrait of Oliver Mas"
+  avatar_tag: "PLAYER 1"
+
+logros:
+  title: "// ACHIEVEMENTS UNLOCKED"
+  items:
+    - tag: "IN PROD"
+      title: "Generative AI in a regulated environment"
+      text: "Architecture and development of a RAG and multi-agent platform for clinical-trial research in rare diseases, in the pharmaceutical sector."
+    - big: "-70%"
+      title: "AWS costs"
+      text: "By optimising the architecture and cloud resource usage, with continuous operational review."
+    - tag: "REAL TIME"
+      title: "Payments and transactions"
+      text: "Stripe, Google Pay, Apple Wallet and restaurant POS: flows where a failure costs money."
+    - tag: "INDUSTRIAL SCALE"
+      title: "Industrial 5G"
+      text: "Cloud orchestration to roll out 5G connectivity at industrial scale and automate the SIM lifecycle."
+
+mundos:
+  title: "// SELECT WORLD"
+  items:
+    - world: "1-1"
+      wt: "WORLD 1 · 2010-2018"
+      title: "Android"
+      text: "From an HTC Magic running Android 1.5 to apps built from scratch: eTaxi (one of the first taxi apps in Madrid), TuMe and Talky with Telefónica R&D, We2 Social WiFi, Weplan, and the Cheerfy app as sole developer and UX designer."
+      stamp: "STAGE CLEAR"
+    - world: "2-1"
+      wt: "WORLD 2 · 2018-2024"
+      title: "Backend, payments and cloud"
+      text: "Lead Software Engineer at Cheerfy: payments, wallets, POS and Wi-Fi captive portals. Then at InnoIT: FastAPI microservices on Azure, industrial 5G on AWS and observability with OpenTelemetry and ELK."
+      stamp: "STAGE CLEAR"
+    - world: "3-1"
+      wt: "WORLD 3 · 2025-NOW"
+      title: "Generative AI"
+      text: "Technical Lead and AI Solutions Architect: secure RAG, multi-agent workflows, structured LLM outputs and real-time experiences with FastAPI, HTMX and SSE on AWS Bedrock."
+      stamp: "NOW PLAYING"
+      now: true
+
+lab:
+  title: "// SOUND CHECK: MY STACK"
+  note: "Each knob is a skill at its real level from my CV. The pads and the keyboard make sound."
+  kbd_hint: "On a computer you can also play with"
+  keys_aria: "Music keyboard"
+  brand: "OLILAB 3"
+  brand_sub: "a tribute to my Arturia MiniLab 3"
+
+bonus:
+  kicker: "BONUS STAGE"
+  h_1: "Uke Driven"
+  h_2: "Development"
+  lead: "When I close the IDE, I pick up the ukulele: a turquoise Fender Dhani Harrison with moon phases on the fretboard. Pick a chord and swipe across the strings."
+  chords_aria: "Chord"
+  strings_aria: "Ukulele strings"
+  video_h_aria: "Oliver playing fingerstyle on his Fender Dhani Harrison ukulele"
+  video_v_aria: "Reel of Oliver playing the ukulele"
+
+contact:
+  insert: "INSERT COIN"
+  title: "Does your team need someone like this?"
+  line: "100% remote from Madrid · Native Spanish · English"
+  linkedin: "Message me on LinkedIn ↗"
+  github: "GitHub ↗"
+
+js:
+  lang: en
+  scroller: " *** OLIDROIDE A.K.A. OLIVER MAS · PRINCIPAL ENGINEER · GENERATIVE AI IN PRODUCTION · RAG · MULTI-AGENT · PYTHON · FASTAPI · AWS BEDROCK · HTMX · SSE · HEXAGONAL ARCHITECTURE · 16 YEARS SHIPPING CODE · 100% REMOTE FROM MADRID · GREETINGS TO EVERY AMIGA KID *** "
+  knobs: [["Python", 100], ["FastAPI", 100], ["PostgreSQL", 100], ["AWS", 100], ["Multi-agent", 90], ["RAG", 80], ["Android", 80], ["React", 60]]
+  faders: [["Architecture", 100], ["Tech leadership", 100], ["Code review", 100], ["Mentoring", 80]]
+  pads: [["KICK", "#2df", "kick"], ["SNARE", "#2df", "snare"], ["HAT", "#2df", "hat"], ["CLAP", "#f93", "clap"], ["■ STOP", "#39f", "stop"], ["▶ PLAY", "#4e8", "play"], ["LASER", "#f45", "laser"], ["TAP", "#fd5", "tap"]]
+  oled:
+    idle_a: "OLIDROIDE"
+    idle_b: "TAP A KNOB · ▶ FOR THE LOOP"
+    level: "LEVEL"
+    pad: "PAD"
+    tap_tempo: "TAP TEMPO · ALSO DRIVES THE COPPER BARS"
+    now_playing: "NOW PLAYING"
+    loop: "LOOP {bpm} BPM · TRIBUTE TO CHRIS HÜLSBECK"
+    stop: "STOP"
+    stopped: "LOOP STOPPED"
+    synth: "OLILAB SYNTH"
+  captions:
+    h: "#fingerstylefursday · playing my Dhani Harrison"
+    v: "@olidroide · ukulele"
+  sound: { on: "♪ WITH SOUND", playing: "♪ PLAYING" }
+  aria: { knob: "{label}: level {v} of 100", fader: "{label}: {v} of 100" }

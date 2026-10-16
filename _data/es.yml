@@ -1,0 +1,122 @@
+lang: es
+locale: es_ES
+label: ES
+alt: { lang: en, url: /en/, label: EN }
+
+meta:
+  title: "olidroide · Oliver Mas · Principal Engineer · IA en producción"
+  description: "Principal Engineer, AI Solutions Architect y Technical Lead con 16 años de experiencia. IA generativa en producción, Python, FastAPI y AWS. 100% remoto desde Madrid."
+
+hero:
+  h1: "olidroide: Oliver Mas Otero, Principal Engineer, AI Solutions Architect y Technical Lead"
+  role_1: "PRINCIPAL ENGINEER"
+  role_2: "AI SOLUTIONS ARCHITECT · TECH LEAD"
+  badge: "Disponible · 100% remoto"
+  start: "PRESS START"
+  lang_aria: "Idioma"
+
+hud:
+  aria: "Marcador"
+  experience: "EXPERIENCIA"
+  years: "AÑOS"
+  aws: "AHORRO AWS"
+  aws_value: "-70%"
+  bugs: "BUGS FIXED"
+  level: "NIVEL"
+
+worlds: { intro: "INTRO", logros: "LOGROS", mundos: "MUNDOS", skills: "SKILLS", bonus: "BONUS", contacto: "CONTINUE?" }
+
+intro:
+  kicker: "PLAYER 1 · OLIVER MAS"
+  h_1: "Principal Engineer."
+  h_grad: "IA en producción"
+  h_2: "no en slides."
+  lead: "16 años construyendo software crítico: de Android 1.5 en 2010 a plataformas de IA generativa en entornos regulados. Arquitectura, código y liderazgo técnico, con las manos en el teclado."
+  chips: ["Python", "FastAPI", "RAG", "Multi-agente", "AWS Bedrock", "PostgreSQL", "HTMX + SSE", "Arquitectura hexagonal"]
+  linkedin: "LinkedIn ↗"
+  avatar_alt: "Retrato de Oliver Mas"
+  avatar_tag: "PLAYER 1"
+
+logros:
+  title: "// LOGROS DESBLOQUEADOS"
+  items:
+    - tag: "EN PROD"
+      title: "IA generativa en entorno regulado"
+      text: "Arquitectura y desarrollo de una plataforma RAG y multiagente para investigación de ensayos clínicos en enfermedades raras, en el sector farmacéutico."
+    - big: "-70%"
+      title: "Coste de AWS"
+      text: "Optimizando arquitectura y uso de recursos cloud, con revisión operativa continua."
+    - tag: "TIEMPO REAL"
+      title: "Pagos y transacciones"
+      text: "Stripe, Google Pay, Apple Wallet y TPV de restaurantes: flujos donde un fallo cuesta dinero."
+    - tag: "NIVEL INDUSTRIAL"
+      title: "5G industrial"
+      text: "Orquestación cloud para desplegar conectividad 5G a nivel industrial y automatizar el ciclo de vida de las SIM."
+
+mundos:
+  title: "// SELECT WORLD"
+  items:
+    - world: "1-1"
+      wt: "MUNDO 1 · 2010-2018"
+      title: "Android"
+      text: "De una HTC Magic con Android 1.5 a apps desde cero: eTaxi (de las primeras apps de taxi en Madrid), TuMe y Talky con Telefónica I+D, We2 Social WiFi, Weplan, y la app de Cheerfy como único dev y diseñador UX."
+      stamp: "STAGE CLEAR"
+    - world: "2-1"
+      wt: "MUNDO 2 · 2018-2024"
+      title: "Backend, pagos y cloud"
+      text: "Lead Software Engineer en Cheerfy: pagos, wallets, TPV y captive portals Wi-Fi. Después, en InnoIT: microservicios FastAPI en Azure, 5G industrial en AWS y observabilidad con OpenTelemetry y ELK."
+      stamp: "STAGE CLEAR"
+    - world: "3-1"
+      wt: "MUNDO 3 · 2025-HOY"
+      title: "IA generativa"
+      text: "Technical Lead y AI Solutions Architect: RAG seguro, flujos multiagente, salidas estructuradas de LLM y experiencias en tiempo real con FastAPI, HTMX y SSE sobre AWS Bedrock."
+      stamp: "NOW PLAYING"
+      now: true
+
+lab:
+  title: "// SOUND CHECK: MI STACK"
+  note: "Cada knob es una skill con su nivel real del CV. Los pads y el teclado suenan."
+  kbd_hint: "En ordenador también puedes tocar con"
+  keys_aria: "Teclado musical"
+  brand: "OLILAB 3"
+  brand_sub: "homenaje a mi Arturia MiniLab 3"
+
+bonus:
+  kicker: "BONUS STAGE"
+  h_1: "Uke Driven"
+  h_2: "Development"
+  lead: "Cuando cierro el IDE, cojo el ukelele: un Fender Dhani Harrison turquesa, con fases lunares en el diapasón. Elige un acorde y pasa el dedo por las cuerdas."
+  chords_aria: "Acorde"
+  strings_aria: "Cuerdas del ukelele"
+  video_h_aria: "Oliver tocando fingerstyle su ukelele Fender Dhani Harrison"
+  video_v_aria: "Reel de Oliver tocando el ukelele"
+
+contact:
+  insert: "INSERT COIN"
+  title: "¿Tu equipo necesita a alguien así?"
+  line: "100% remoto desde Madrid · Español nativo · English"
+  linkedin: "Escríbeme en LinkedIn ↗"
+  github: "GitHub ↗"
+
+js:
+  lang: es
+  scroller: " *** OLIDROIDE A.K.A. OLIVER MAS · PRINCIPAL ENGINEER · IA GENERATIVA EN PROD · RAG · MULTIAGENTE · PYTHON · FASTAPI · AWS BEDROCK · HTMX · SSE · ARQUITECTURA HEXAGONAL · 16 AÑOS PROGRAMANDO · 100% REMOTO DESDE MADRID · GREETINGS TO EVERY AMIGA KID *** "
+  knobs: [["Python", 100], ["FastAPI", 100], ["PostgreSQL", 100], ["AWS", 100], ["Multi-agente", 90], ["RAG", 80], ["Android", 80], ["React", 60]]
+  faders: [["Arquitectura", 100], ["Liderazgo técnico", 100], ["Code review", 100], ["Mentoring", 80]]
+  pads: [["KICK", "#2df", "kick"], ["SNARE", "#2df", "snare"], ["HAT", "#2df", "hat"], ["CLAP", "#f93", "clap"], ["■ STOP", "#39f", "stop"], ["▶ PLAY", "#4e8", "play"], ["LÁSER", "#f45", "laser"], ["TAP", "#fd5", "tap"]]
+  oled:
+    idle_a: "OLIDROIDE"
+    idle_b: "TOCA UN KNOB · ▶ PARA EL LOOP"
+    level: "NIVEL"
+    pad: "PAD"
+    tap_tempo: "TAP TEMPO · TAMBIÉN MUEVE LAS BARRAS COPPER"
+    now_playing: "NOW PLAYING"
+    loop: "LOOP {bpm} BPM · TRIBUTO A CHRIS HÜLSBECK"
+    stop: "STOP"
+    stopped: "LOOP PARADO"
+    synth: "OLILAB SYNTH"
+  captions:
+    h: "#fingerstylefursday · tocando mi Dhani Harrison"
+    v: "@olidroide · ukelele"
+  sound: { on: "♪ CON SONIDO", playing: "♪ SONANDO" }
+  aria: { knob: "{label}: nivel {v} de 100", fader: "{label}: {v} de 100" }

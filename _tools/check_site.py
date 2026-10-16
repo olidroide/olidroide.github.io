@@ -91,7 +91,9 @@ def _():
 
 @check("cfasync")
 def _():
-    bad = [(l, t[:60]) for l in PAGES for t in re.findall(r"<script\b[^>]*>", html(l)) if 'data-cfasync="false"' not in t]
+    # Rocket Loader solo reescribe JavaScript; los bloques JSON (ld+json de jekyll-seo-tag, i18n) no le afectan
+    scripts = [t for l in PAGES for t in re.findall(r"<script\b[^>]*>", html(l))]
+    bad = [t[:60] for t in scripts if 'data-cfasync="false"' not in t and not re.search(r'type="application/(ld\+)?json"', t)]
     return f"{bad}" if bad else None
 
 
@@ -99,7 +101,8 @@ def _():
 def _():
     missing = set()
     for l in PAGES:
-        for ref in re.findall(r'(?:src|href|poster)="(/(?!/)[^"?#]*)', html(l)):
+        doc = html(l).replace('"https://olidroide.es/', '"/')   # las URLs absolutas propias (og:image, canonical) también deben existir
+        for ref in re.findall(r'(?:src|href|poster|content)="(/(?!/)[^"?#]*)', doc):
             target = SITE / ref.lstrip("/")
             if ref.endswith("/"):
                 target = target / "index.html"
