@@ -146,7 +146,7 @@ h2{font-size:clamp(32px,6.4vw,64px);line-height:1.04;margin:0;letter-spacing:-.0
 .key.b.down{background:#2a8}
 .key:focus-visible{outline:3px solid #2df;outline-offset:-3px}
 .brand{grid-area:brand;display:flex;justify-content:space-between;align-items:baseline;font:700 14px 'Space Grotesk',sans-serif;letter-spacing:.12em;color:#222}
-.brand small{font-weight:400;letter-spacing:0;color:#777;font-size:12px}
+.brand small{font-weight:400;letter-spacing:0;color:#5c5c5c;font-size:12px}
 
 /* ---------- BONUS STAGE: ukelele + vídeo, estilo Fender ---------- */
 .bonus{background:radial-gradient(ellipse at 85% 0%,#0b3540 0%,var(--bg) 62%);border-top:1px solid #12303a}
