@@ -30,3 +30,10 @@ _cv_raw/
 
 # Documentos internos de diseño y prototipo: no publicar
 docs/superpowers/
+
+# Dependencias locales de Ruby
+vendor/
+.bundle/
+
+# Originales en bruto (vídeos, fotos): nunca se publican ni se versionan
+_raw/

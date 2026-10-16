@@ -1,38 +1,19 @@
-baseurl: ''
-exclude: ['README.md']
+title: olidroide
+description: Principal Engineer · AI Solutions Architect · Technical Lead
+url: https://olidroide.es
+baseurl: ""
 permalink: pretty
-title: 'olidroide 📱 Lead Software Engineer @InnoIT'
+author: Oliver Mas Otero
 
-google_analytics_id: ""
-homepage:
-  show_call_box: false
-logo:
-  mobile: "images/logo/logo-mobile.svg"
-  desktop: "images/logo/oli_logo.svg"
-  desktop_height: "36px"
-footer:
-  copyright_text: 'Jekyll theme by <a class="zerostatic" href="https://www.zerostatic.io">www.zerostatic.io</a>'
+social:
+  name: Oliver Mas Otero
+  links:
+    - https://www.linkedin.com/in/olidroide/
+    - https://github.com/olidroide
 
-seo:
-  meta_og_title: "olidroide"
-  meta_og_type: "website"
-  meta_og_url: "https://olidroide.es"
-  meta_og_image: "https://raw.githubusercontent.com/zerostaticthemes/jekyll-serif-theme/master/screenshots/tn.png"
-  meta_og_description: "olidroide 📱 Lead Software Engineer @InnoIT 🕺 Continuous Bollywood Dancer 🎸 Uke Driven Development"
-  meta_twitter_card: "summary"
-  meta_twitter_site: "@olidroide"
-  meta_twitter_creator: "@olidroide"
-
-collections:
-  services:
-    output: false
-  team:
-    output: false
-
-sass:
-  indentWidth: 4
-  style: compact # possible values: nested expanded compact compressed
-  precision: 10
+exclude: [docs, _tools, README.md, Gemfile, Gemfile.lock, LICENSE, vendor]
 
 plugins:
-  - jekyll-environment-variables
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-redirect-from
