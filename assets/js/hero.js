@@ -7,6 +7,7 @@
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const qt = new URLSearchParams(location.search).get('t') ?? new URLSearchParams(location.hash.slice(1)).get('t');   // ?t=2.5 o #t=2.5
   const frozen = qt !== null && qt !== '' && !isNaN(+qt);              // ?t=2.5 → frame exacto para QA
+  const freezeAt = frozen ? Math.min(Math.max(+qt, 0), 600) : 0;      // tope: un #t enorme no debe colgar la pestaña
   const $ = (id) => document.getElementById(id);
   const hero = $('hero'), hud = $('hud'), copyEl = $('copy');
   const sky = $('sky'), sctx = sky.getContext('2d');
@@ -330,11 +331,11 @@
   }).catch(showPhoto);
 
   // ---------- arranque ----------
-  const fontReady = Promise.race([document.fonts.load('16px "Press Start 2P"'), new Promise((r) => setTimeout(r, 1500))]);
+  const fontReady = Promise.race([document.fonts.load('16px "Press Start 2P"').catch(() => {}), new Promise((r) => setTimeout(r, 1500))]);   // si la fuente falla, arranca con la de respaldo
   fontReady.then(() => {
     layout(); ready = true;
-    if (reduce) still(3); else if (frozen) still(+qt); else start();
-    new ResizeObserver(() => { layout(); if (reduce) still(3); else if (frozen) still(+qt); }).observe(hero);
+    if (reduce) still(3); else if (frozen) still(freezeAt); else start();
+    new ResizeObserver(() => { layout(); if (reduce) still(3); else if (frozen) still(freezeAt); }).observe(hero);
     new IntersectionObserver(([e]) => (e.isIntersecting ? start() : stop())).observe(hero);
   });
 })();

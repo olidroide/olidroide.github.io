@@ -15,6 +15,7 @@
   let ac, master, noise;
   const audio = () => {
     if (!ac) {
+      if (navigator.audioSession) navigator.audioSession.type = 'playback';   // iOS: que suene aunque el iPhone esté en silencio, como el vídeo
       ac = new (window.AudioContext || window.webkitAudioContext)();
       const comp = ac.createDynamicsCompressor(); master = ac.createGain(); master.gain.value = 0.25;
       master.connect(comp).connect(ac.destination);
@@ -23,6 +24,9 @@
     if (ac.state === 'suspended') ac.resume();
     return ac.currentTime;
   };
+  // con el dedo, pointerdown no cuenta como gesto para el audio: se reanuda al levantarlo
+  const unlock = () => { if (ac && ac.state === 'suspended') ac.resume(); };
+  addEventListener('pointerup', unlock, true); addEventListener('touchend', unlock, true);
   const env = (g, w, peak, dur) => { g.gain.setValueAtTime(0.0001, w); g.gain.linearRampToValueAtTime(peak, w + 0.004); g.gain.exponentialRampToValueAtTime(0.0001, w + dur); };
   const osc = (type, f, w, dur, peak, dest = master) => { const o = ac.createOscillator(), g = ac.createGain(); o.type = type; o.frequency.setValueAtTime(f, w); env(g, w, peak, dur); o.connect(g).connect(dest); o.start(w); o.stop(w + dur + 0.05); return o; };
   const burst = (w, dur, peak, type, freq, q = 1) => { const s = ac.createBufferSource(), f = ac.createBiquadFilter(), g = ac.createGain(); s.buffer = noise; f.type = type; f.frequency.value = freq; f.Q.value = q; env(g, w, peak, dur); s.connect(f).connect(g).connect(master); s.start(w); s.stop(w + dur + 0.05); };
@@ -156,6 +160,7 @@
     const k = keysEl.querySelector(`[data-m="${60 + i}"]`); if (k) noteOn(60 + i, k);
   });
   addEventListener('keyup', (e) => { const i = KEYMAP.indexOf(e.key.toLowerCase()); if (i >= 0) noteOff(60 + i); });
+  addEventListener('blur', () => [...voices.keys()].forEach(noteOff));   // Cmd+Tab con una tecla pulsada: sin keyup, la nota quedaría sonando
 
   // ---------- ukelele: Karplus-Strong (cuerda pulsada física, 1983) ----------
   const OPEN = [67, 60, 64, 69];                                     // afinación re-entrante G C E A
