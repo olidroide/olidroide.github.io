@@ -20,3 +20,13 @@ Thumbs.db
 .Spotlight-V100
 .Trashes
 .idea
+
+# CV fuente privado (teléfono, email): no publicar
+_cv_raw/
+.superpowers/
+
+# Vídeos originales: solo se publican las versiones recodificadas
+/*.mp4
+
+# Documentos internos de diseño y prototipo: no publicar
+docs/superpowers/
