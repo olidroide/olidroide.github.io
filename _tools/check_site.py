@@ -145,6 +145,28 @@ def _():
     return None if level == "LEVEL" else f"oled.level={level!r}"
 
 
+@check("i18n_keys")
+def _():
+    # YAML lee claves como on/off/yes/no como booleanos: si pasa, el texto llega vacío a la página
+    need = ["scroller", "knobs", "faders", "pads", "oled.idle_a", "oled.idle_b", "oled.level", "oled.pad", "oled.tap_tempo",
+            "oled.now_playing", "oled.loop", "oled.stop", "oled.stopped", "oled.synth", "captions.h", "captions.v",
+            "sound.on", "sound.playing", "aria.knob", "aria.fader"]
+    bad = []
+    for l in PAGES:
+        doc = html(l)
+        data = json.loads(re.search(r'<script\b[^>]*id="i18n"[^>]*>(.*?)</script>', doc, re.S).group(1))
+        for key in need:
+            v = data
+            for part in key.split("."):
+                v = v.get(part) if isinstance(v, dict) else None
+            if not v:
+                bad.append((l, key))
+        snd = re.search(r'<button\b[^>]*id="snd"[^>]*>(.*?)</button>', doc, re.S)
+        if not snd or not snd.group(1).strip():
+            bad.append((l, "#snd vacío"))
+    return f"faltan {bad}" if bad else None
+
+
 @check("redirect_about")
 def _():
     p = SITE / "about" / "index.html"

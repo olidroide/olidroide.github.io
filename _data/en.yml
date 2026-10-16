@@ -118,5 +118,5 @@ js:
   captions:
     h: "#fingerstylefursday · playing my Dhani Harrison"
     v: "@olidroide · ukulele"
-  sound: { on: "♪ WITH SOUND", playing: "♪ PLAYING" }
+  sound: { "on": "♪ WITH SOUND", playing: "♪ PLAYING" }
   aria: { knob: "{label}: level {v} of 100", fader: "{label}: {v} of 100" }
