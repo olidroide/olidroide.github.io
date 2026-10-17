@@ -89,6 +89,18 @@ h2{font-size:clamp(32px,6.4vw,64px);line-height:1.04;margin:0;letter-spacing:-.0
 .ach .tag{display:inline-block;font-size:8px;color:#000;background:var(--green);padding:5px 7px;margin-bottom:14px}
 .ach h3{margin:0 0 8px;font-size:20px;line-height:1.2}
 .ach p{margin:0;color:#a8aabd;font-size:15px}
+.quests{display:grid;gap:14px}
+.quest{position:relative;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:8px;transition:border-color .15s}
+.quest:hover,.quest:focus-within{border-color:#3a3d5a}
+.quest .qlang{font-size:8px;color:var(--cyan)}
+.quest h3{margin:2px 0 0;font-size:19px;line-height:1.25}
+.quest p{margin:0;color:#a8aabd;font-size:15px;flex:1}
+.qlink{align-self:flex-start;display:inline-flex;align-items:center;min-height:44px;font-weight:700;color:var(--gold);text-decoration:none}
+.qlink:after{content:'';position:absolute;inset:0;border-radius:16px}
+.qlink:focus-visible{outline:none}
+.quest:has(.qlink:focus-visible){outline:2px solid var(--gold);outline-offset:3px}
+@media (min-width:640px){.quests{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:960px){.quests{grid-template-columns:repeat(3,1fr)}}
 .worlds{list-style:none;padding:0;margin:0;display:grid;gap:14px}
 .world{position:relative;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:22px 22px 26px}
 .world .wt{font-size:9px;color:var(--orange)}

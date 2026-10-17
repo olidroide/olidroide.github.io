@@ -83,6 +83,7 @@
         </ul>
         <div class="ctas">
           <a class="btn primary" href="https://www.linkedin.com/in/olidroide/" rel="me">{{ t.intro.linkedin }}</a>
+          <a class="btn" href="https://github.com/olidroide" rel="me">{{ t.contact.github }}</a>
           <!--email_off--><a class="btn" href="mailto:hola@olidroide.es">hola@olidroide.es</a><!--/email_off-->
         </div>
       </div>
@@ -119,6 +120,22 @@
       </li>
       {%- endfor %}
     </ol>
+  </section>
+
+  <section id="side-quests" class="wrap" data-world="{{ t.worlds.quests }}">
+    <h2 class="sec px">{{ t.quests.title }}</h2>
+    <p class="lab-note">{{ t.quests.intro }}</p>
+    <div class="quests">
+      {%- for q in t.quests.items %}
+      <article class="quest">
+        <span class="qlang px">{{ q.lang }}</span>
+        <h3>{{ q.name }}</h3>
+        <p>{{ q.text }}</p>
+        <a class="qlink" href="https://github.com/olidroide/{{ q.repo }}">{{ t.quests.view }}<span class="sr"> {{ q.name }}</span></a>
+      </article>
+      {%- endfor %}
+    </div>
+    <div class="ctas"><a class="btn" href="https://github.com/olidroide?tab=repositories" rel="me">{{ t.quests.more }}</a></div>
   </section>
 
   <section id="skills" class="wrap" data-world="{{ t.worlds.skills }}">

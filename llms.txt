@@ -33,6 +33,12 @@ En español: {{ es.meta.description }}
 - **{{ w.wt | replace: "WORLD", "Stage" | capitalize }}, {{ w.title }}**: {{ w.text }}
 {%- endfor %}
 
+## Open source / side projects
+{% for q in en.quests.items %}
+- [{{ q.name }}](https://github.com/olidroide/{{ q.repo }}) ({{ q.lang }}): {{ q.text }}
+{%- endfor %}
+- All repositories: https://github.com/olidroide?tab=repositories
+
 ## Skills
 {% for g in en.stack.groups %}
 - **{{ g.name }}**: {{ g.items }}

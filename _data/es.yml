@@ -26,7 +26,7 @@ hud:
   bugs: "BUGS FIXED"
   level: "NIVEL"
 
-worlds: { intro: "INTRO", logros: "LOGROS", mundos: "MUNDOS", skills: "SKILLS", bonus: "BONUS", contacto: "CONTINUE?" }
+worlds: { intro: "INTRO", logros: "LOGROS", mundos: "MUNDOS", quests: "SIDE QUESTS", skills: "SKILLS", bonus: "BONUS", contacto: "CONTINUE?" }
 
 intro:
   kicker: "PLAYER 1 · OLIVER MAS"
@@ -74,6 +74,33 @@ mundos:
       text: "Technical Lead y AI Solutions Architect: RAG seguro, flujos multiagente, salidas estructuradas de LLM y experiencias en tiempo real con FastAPI, HTMX y SSE sobre AWS Bedrock."
       stamp: "NOW PLAYING"
       now: true
+
+quests:
+  title: "// SIDE QUESTS: OPEN SOURCE"
+  intro: "Proyectos personales en mi GitHub. El código está ahí, sin filtros."
+  view: "Ver código ↗"
+  more: "Ver todo en GitHub ↗"
+  items:
+    - repo: "fastapi-htmx-sse"
+      name: "FastAPI + HTMX + SSE"
+      lang: "Python · HTMX"
+      text: "Ejemplo del stack de tiempo real que uso en producción: servidor FastAPI, interfaz con HTMX y actualizaciones por Server-Sent Events."
+    - repo: "rag-chat-poc"
+      name: "RAG chat (PoC)"
+      lang: "TypeScript · Next.js"
+      text: "Prueba de concepto de un frontend de chat con Retrieval-Augmented Generation."
+    - repo: "doresare"
+      name: "Doresare"
+      lang: "Python"
+      text: "Detector de acordes y generador de vídeo: código y música en el mismo repo."
+    - repo: "top-video-generator"
+      name: "Top Video Generator"
+      lang: "Python"
+      text: "Genera automáticamente vídeos resumen con los contenidos que más crecen, cada día o cada semana."
+    - repo: "-A-quien-le-importa-lo-que-FastAPI-haga-"
+      name: "¿A quién le importa lo que FastAPI haga?"
+      lang: "Python · charla"
+      text: "Código de demo de mi charla sobre FastAPI."
 
 lab:
   title: "// SOUND CHECK: MI STACK"

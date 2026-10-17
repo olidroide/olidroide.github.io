@@ -236,6 +236,25 @@ def _():
     return f"faltan {bad}" if bad else None
 
 
+@check("github")
+def _():
+    # GitHub visible arriba (junto a LinkedIn) y una sección con repos enlazados al código
+    repos = ["fastapi-htmx-sse", "rag-chat-poc", "doresare", "top-video-generator", "-A-quien-le-importa-lo-que-FastAPI-haga-"]
+    bad = []
+    for l in PAGES:
+        doc = html(l)
+        a, b = doc.find('id="inicio"'), doc.find('id="logros"')
+        if 'href="https://github.com/olidroide"' not in doc[a:b]:
+            bad.append((l, "sin GitHub en #inicio"))
+        q = doc.find('id="side-quests"')
+        if q < 0:
+            bad.append((l, "sin #side-quests"))
+            continue
+        block = doc[q:doc.find("</section>", q)]
+        bad += [(l, r) for r in repos if f'href="https://github.com/olidroide/{r}"' not in block]
+    return f"{bad}" if bad else None
+
+
 @check("redirect_about")
 def _():
     p = SITE / "about" / "index.html"
