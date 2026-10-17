@@ -6,6 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#000000">
 {%- assign p = site.data.profile -%}
+{%- assign v = site.time | date: "%s" -%}
 {%- assign page_url = "https://olidroide.es" | append: page.url -%}
 <title>{{ t.meta.title | escape }}</title>
 <meta name="description" content="{{ t.meta.description | escape }}">
@@ -36,7 +37,7 @@
 <link rel="alternate" type="text/markdown" title="llms.txt" href="https://olidroide.es/llms.txt">
 <link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/press-start-2p.woff2">
 <link rel="icon" type="image/png" href="/assets/img/favicon.png">
-<link rel="stylesheet" href="/assets/css/site.css">
+<link rel="stylesheet" href="/assets/css/site.css?v={{ v }}">
 <script type="application/ld+json" data-cfasync="false">
 {"@context":"https://schema.org","@graph":[
 {"@type":"ProfilePage","@id":{{ page_url | append: "#profile" | jsonify }},"url":{{ page_url | jsonify }},"name":{{ t.meta.title | jsonify }},"inLanguage":{{ page.lang | jsonify }},"dateModified":{{ site.time | date_to_xmlschema | jsonify }},"isPartOf":{"@id":"https://olidroide.es/#website"},"mainEntity":{"@id":"https://olidroide.es/#person"}},
@@ -196,7 +197,7 @@
 </main>
 
 <script type="application/json" id="i18n" data-cfasync="false">{{ t.js | jsonify }}</script>
-<script src="/assets/js/hero.js" data-cfasync="false"></script>
-<script src="/assets/js/lab.js" data-cfasync="false"></script>
+<script src="/assets/js/hero.js?v={{ v }}" data-cfasync="false"></script>
+<script src="/assets/js/lab.js?v={{ v }}" data-cfasync="false"></script>
 </body>
 </html>

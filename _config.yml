@@ -20,3 +20,6 @@ defaults:
 plugins:
   - jekyll-sitemap
   - jekyll-redirect-from
+
+# IndexNow (Bing, Yandex, Seznam…): la clave es pública por diseño
+indexnow_key: "ad9d804fc73dd9201079f0f272bb49f2"

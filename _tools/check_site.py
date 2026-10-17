@@ -255,6 +255,26 @@ def _():
     return f"{bad}" if bad else None
 
 
+@check("indexnow")
+def _():
+    m = re.search(r'^indexnow_key:\s*"([0-9a-f]{32})"', (SITE.parent / "_config.yml").read_text(encoding="utf-8"), re.M)
+    if not m:
+        return "no hay indexnow_key en _config.yml"
+    f = SITE / f"{m.group(1)}.txt"
+    return None if f.is_file() and f.read_text(encoding="utf-8").strip() == m.group(1) else f"falta {f.name} con la clave"
+
+
+@check("asset_version")
+def _():
+    # CSS/JS con ?v=<build> para que tras un despliegue nadie mezcle HTML nuevo con JS viejo en caché
+    bad = []
+    for l in PAGES:
+        for ref in ("/assets/css/site.css", "/assets/js/hero.js", "/assets/js/lab.js"):
+            if not re.search(re.escape(ref) + r'\?v=\d+"', html(l)):
+                bad.append((l, ref))
+    return f"sin versión: {bad}" if bad else None
+
+
 @check("redirect_about")
 def _():
     p = SITE / "about" / "index.html"
