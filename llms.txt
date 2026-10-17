@@ -1,0 +1,44 @@
+---
+layout: null
+permalink: /llms.txt
+sitemap: false
+---
+{%- assign en = site.data.en -%}{%- assign es = site.data.es -%}{%- assign p = site.data.profile -%}
+# Oliver Mas ({{ p.alternate_name }})
+
+> {{ en.meta.description }}
+
+{{ p.name }} ({{ p.alternate_name }}) is a {{ p.job_title }} based in Madrid, Spain, open to **100% remote** roles. Native Spanish, English. {{ en.intro.lead }}
+
+En español: {{ es.meta.description }}
+
+## Pages
+
+- [Perfil en español](https://olidroide.es/): versión principal de la web.
+- [Profile in English](https://olidroide.es/en/): same content in English.
+
+## Contact
+
+- LinkedIn: https://www.linkedin.com/in/olidroide/
+- Email: hola@olidroide.es
+- GitHub: https://github.com/olidroide
+
+## Highlights
+{% for a in en.logros.items %}
+- **{{ a.title }}**{% if a.big %} ({{ a.big }}){% endif %}: {{ a.text }}
+{%- endfor %}
+
+## Career
+{% for w in en.mundos.items %}
+- **{{ w.wt | replace: "WORLD", "Stage" | capitalize }}, {{ w.title }}**: {{ w.text }}
+{%- endfor %}
+
+## Skills
+{% for g in en.stack.groups %}
+- **{{ g.name }}**: {{ g.items }}
+{%- endfor %}
+
+## Education
+
+{% for u in p.education_en %}- {{ u }}
+{% endfor %}

@@ -123,14 +123,83 @@ def _():
 
 @check("jsonld")
 def _():
+    # un único grafo: ProfilePage → Person (mismo @id), con skills y estudios para buscadores e IA
     bad = []
     for l in PAGES:
         blocks = re.findall(r'<script\b[^>]*type="application/ld\+json"[^>]*>(.*?)</script>', html(l), re.S)
-        people = [d for d in (json.loads(b) for b in blocks) for d in (d if isinstance(d, list) else [d])
-                  if d.get("@type") == "Person" and d.get("alternateName") == "olidroide"]
-        if not people:
-            bad.append(l)
-    return f"sin Person/olidroide en {bad}" if bad else None
+        if len(blocks) != 1:
+            bad.append((l, f"{len(blocks)} bloques ld+json"))
+            continue
+        graph = json.loads(blocks[0]).get("@graph", [])
+        by_type = {n.get("@type"): n for n in graph}
+        person, profile = by_type.get("Person", {}), by_type.get("ProfilePage", {})
+        if person.get("alternateName") != "olidroide" or not person.get("@id"):
+            bad.append((l, "Person sin alternateName/@id"))
+        if profile.get("mainEntity", {}).get("@id") != person.get("@id"):
+            bad.append((l, "ProfilePage.mainEntity no apunta a Person"))
+        if "LangSmith" not in person.get("knowsAbout", []) or not person.get("alumniOf"):
+            bad.append((l, "Person sin knowsAbout/alumniOf"))
+    return f"{bad}" if bad else None
+
+
+@check("title")
+def _():
+    bad = []
+    for l in PAGES:
+        titles = re.findall(r"<title>(.*?)</title>", html(l), re.S)
+        if len(titles) != 1 or "Oliver Mas" not in titles[0] or titles[0].count("olidroide") > 1 or len(titles[0]) > 65:
+            bad.append((l, titles))
+    return f"{bad}" if bad else None
+
+
+@check("og_locale")
+def _():
+    want = {"es": ("es_ES", "en_US"), "en": ("en_US", "es_ES")}
+    bad = [l for l, (loc, alt) in want.items()
+           if f'property="og:locale" content="{loc}"' not in html(l) or f'property="og:locale:alternate" content="{alt}"' not in html(l)]
+    return f"og:locale incorrecto en {bad}" if bad else None
+
+
+@check("stack_text")
+def _():
+    # skills que antes solo existían en los knobs creados por JS: deben estar en el HTML para rastreadores sin JavaScript
+    need = {"es": ["React", "LangSmith", "Pydantic AI", "Mentoring", "Liderazgo técnico", "Testcontainers"],
+            "en": ["React", "LangSmith", "Pydantic AI", "Mentoring", "Technical leadership", "Testcontainers"]}
+    bad = []
+    for l, words in need.items():
+        text = re.sub(r"<[^>]+>", " ", re.sub(r"<script[\s\S]*?</script>", " ", html(l)))
+        bad += [(l, w) for w in words if w not in text]
+    return f"faltan {bad}" if bad else None
+
+
+@check("llms")
+def _():
+    p = SITE / "llms.txt"
+    if not p.is_file():
+        return "no existe llms.txt"
+    t = p.read_text(encoding="utf-8")
+    need = ["# Oliver Mas", "https://olidroide.es/en/", "https://www.linkedin.com/in/olidroide/", "LangSmith", "hola@olidroide.es"]
+    missing = [n for n in need if n not in t]
+    return f"faltan {missing}" if missing else (None if "+34" not in t else "contiene +34")
+
+
+@check("robots")
+def _():
+    t = (SITE / "robots.txt").read_text(encoding="utf-8")
+    need = ["User-agent: *", "User-agent: GPTBot", "User-agent: OAI-SearchBot", "User-agent: ClaudeBot", "User-agent: PerplexityBot",
+            "Sitemap: https://olidroide.es/sitemap.xml"]
+    missing = [n for n in need if n not in t]
+    if re.search(r"^Disallow:\s*/\s*$", t, re.M):
+        missing.append("hay un Disallow: /")
+    return f"{missing}" if missing else None
+
+
+@check("sitemap_clean")
+def _():
+    t = (SITE / "sitemap.xml").read_text(encoding="utf-8")
+    locs = re.findall(r"<loc>(.*?)</loc>", t)
+    want = {"https://olidroide.es/", "https://olidroide.es/en/"}
+    return None if set(locs) == want else f"locs={locs}"
 
 
 @check("i18n_en")

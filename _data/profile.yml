@@ -1,0 +1,10 @@
+# Datos del perfil comunes a todos los idiomas (JSON-LD y llms.txt)
+name: "Oliver Mas Otero"
+alternate_name: "olidroide"
+given_name: "Oliver"
+family_name: "Mas Otero"
+job_title: "Principal Engineer · AI Solutions Architect · Technical Lead"
+alumni_of: ["Universidad Rey Juan Carlos", "Universidad Alfonso X el Sabio"]
+same_as: ["https://www.linkedin.com/in/olidroide/", "https://github.com/olidroide"]
+knows_about: ["Generative AI", "Retrieval-Augmented Generation (RAG)", "Multi-agent systems", "LLM engineering", "LangSmith", "AWS Bedrock", "Pydantic AI", "Python", "FastAPI", "SQLAlchemy", "PostgreSQL", "Redis", "HTMX", "Server-Sent Events", "AWS", "Azure", "Docker", "OpenTelemetry", "Hexagonal architecture", "Clean Architecture", "Software architecture", "Technical leadership", "Android", "Stripe", "Payment integrations"]
+education_en: ["Master's degree in Free Software, Universidad Rey Juan Carlos (2010-2012)", "Systems Administration Engineering, Universidad Alfonso X el Sabio (2008-2010)"]

@@ -1,10 +1,12 @@
 lang: es
 locale: es_ES
+alt_locale: en_US
 label: ES
 alt: { lang: en, url: /en/, label: EN }
 
 meta:
-  title: "olidroide · Oliver Mas · Principal Engineer · IA en producción"
+  title: "Oliver Mas (olidroide) · Principal Engineer · IA generativa"
+  og_image_alt: "Portada pixel art de olidroide: logo cromado, nave y planeta en semitono"
   description: "Principal Engineer, AI Solutions Architect y Technical Lead con 16 años de experiencia. IA generativa en producción, Python, FastAPI y AWS. 100% remoto desde Madrid."
 
 hero:
@@ -80,6 +82,22 @@ lab:
   keys_aria: "Teclado musical"
   brand: "OLILAB 3"
   brand_sub: "homenaje a mi Arturia MiniLab 3"
+
+stack:
+  summary: "Ver el stack completo en texto"
+  groups:
+    - name: "IA y LLM"
+      items: "LangSmith, AWS Bedrock, LiteLLM, Pydantic AI, Agno, RAG, flujos multiagente, OpenSearch Vector Search, salidas estructuradas de LLM, prompt engineering, LLM gateway y abstracción de proveedores"
+    - name: "Backend"
+      items: "Python, FastAPI, Pydantic, SQLAlchemy 2.0, Alembic, Django, PostgreSQL, Redis, DynamoDB, APIs REST, Server-Sent Events, WebSockets, procesamiento asíncrono, microservicios, PHP"
+    - name: "Frontend y móvil"
+      items: "HTMX, Jinja2, Tailwind CSS, SSR, React, Redux, JavaScript, Node.js, Android"
+    - name: "Cloud, DevOps y observabilidad"
+      items: "AWS (ECS Fargate, Lambda, S3, SQS, SNS, OpenSearch, CloudWatch), Azure, Docker, GitHub Actions, GitLab CI/CD, Testcontainers, OpenTelemetry, ELK, PostHog"
+    - name: "Arquitectura y liderazgo"
+      items: "Arquitectura hexagonal, Clean Architecture, patrones de diseño, system design, ADRs, testing de integración, RBAC, code reviews, Liderazgo técnico, Mentoring, gestión de stakeholders, entrega ágil"
+    - name: "Pagos e integraciones"
+      items: "Stripe, Google Pay, Apple Wallet, TPV de restaurantes, webhooks, sistemas transaccionales, captive portals, MikroTik, UniFi, automatización de red"
 
 bonus:
   kicker: "BONUS STAGE"

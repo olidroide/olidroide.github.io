@@ -145,6 +145,13 @@ h2{font-size:clamp(32px,6.4vw,64px);line-height:1.04;margin:0;letter-spacing:-.0
 .key.down{background:linear-gradient(#cff,#9ee)}
 .key.b.down{background:#2a8}
 .key:focus-visible{outline:3px solid #2df;outline-offset:-3px}
+.stack{max-width:1000px;margin:18px auto 0;border:1px solid var(--line);border-radius:14px;background:var(--panel)}
+.stack summary{cursor:pointer;min-height:44px;display:flex;align-items:center;padding:0 18px;font-weight:700;color:#d4d5e0}
+.stack summary:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.stack dl{margin:0;padding:4px 18px 18px;display:grid;gap:6px 18px}
+.stack dt{font-weight:700;color:var(--cyan);margin-top:8px}
+.stack dd{margin:0;color:#a8aabd;font-size:15px}
+@media (min-width:960px){.stack dl{grid-template-columns:240px 1fr}.stack dt{margin-top:0}}
 .brand{grid-area:brand;display:flex;justify-content:space-between;align-items:baseline;font:700 14px 'Space Grotesk',sans-serif;letter-spacing:.12em;color:#222}
 .brand small{font-weight:400;letter-spacing:0;color:#5c5c5c;font-size:12px}
 

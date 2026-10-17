@@ -13,7 +13,10 @@ social:
 
 exclude: [docs, _tools, README.md, Gemfile, Gemfile.lock, LICENSE, vendor]
 
+defaults:
+  - scope: { path: "zc0hkhnm8yhiylh6y0o8ictzmwtezo.html" }
+    values: { sitemap: false }
+
 plugins:
-  - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-redirect-from

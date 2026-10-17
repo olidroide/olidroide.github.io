@@ -5,15 +5,44 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#000000">
-{% seo %}
+{%- assign p = site.data.profile -%}
+{%- assign page_url = "https://olidroide.es" | append: page.url -%}
+<title>{{ t.meta.title | escape }}</title>
+<meta name="description" content="{{ t.meta.description | escape }}">
+<meta name="author" content="{{ p.name }}">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="{{ page_url }}">
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="olidroide">
+<meta property="og:title" content="{{ t.meta.title | escape }}">
+<meta property="og:description" content="{{ t.meta.description | escape }}">
+<meta property="og:url" content="{{ page_url }}">
+<meta property="og:image" content="https://olidroide.es/assets/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{{ t.meta.og_image_alt | escape }}">
+<meta property="og:locale" content="{{ t.locale }}">
+<meta property="og:locale:alternate" content="{{ t.alt_locale }}">
+<meta property="profile:first_name" content="{{ p.given_name }}">
+<meta property="profile:last_name" content="{{ p.family_name }}">
+<meta property="profile:username" content="{{ p.alternate_name }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ t.meta.title | escape }}">
+<meta name="twitter:description" content="{{ t.meta.description | escape }}">
+<meta name="twitter:image" content="https://olidroide.es/assets/img/og.png">
 <link rel="alternate" hreflang="es" href="https://olidroide.es/">
 <link rel="alternate" hreflang="en" href="https://olidroide.es/en/">
 <link rel="alternate" hreflang="x-default" href="https://olidroide.es/">
+<link rel="alternate" type="text/markdown" title="llms.txt" href="https://olidroide.es/llms.txt">
 <link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/press-start-2p.woff2">
 <link rel="icon" type="image/png" href="/assets/img/favicon.png">
 <link rel="stylesheet" href="/assets/css/site.css">
 <script type="application/ld+json" data-cfasync="false">
-{"@context":"https://schema.org","@type":"Person","name":"Oliver Mas Otero","alternateName":"olidroide","jobTitle":"Principal Engineer · AI Solutions Architect · Technical Lead","url":"https://olidroide.es/","image":"https://olidroide.es/assets/img/avatar.jpg","address":{"@type":"PostalAddress","addressLocality":"Madrid","addressCountry":"ES"},"knowsLanguage":["es","en"],"sameAs":["https://www.linkedin.com/in/olidroide/","https://github.com/olidroide"]}
+{"@context":"https://schema.org","@graph":[
+{"@type":"ProfilePage","@id":{{ page_url | append: "#profile" | jsonify }},"url":{{ page_url | jsonify }},"name":{{ t.meta.title | jsonify }},"inLanguage":{{ page.lang | jsonify }},"dateModified":{{ site.time | date_to_xmlschema | jsonify }},"isPartOf":{"@id":"https://olidroide.es/#website"},"mainEntity":{"@id":"https://olidroide.es/#person"}},
+{"@type":"WebSite","@id":"https://olidroide.es/#website","url":"https://olidroide.es/","name":"olidroide","inLanguage":["es","en"],"publisher":{"@id":"https://olidroide.es/#person"}},
+{"@type":"Person","@id":"https://olidroide.es/#person","name":{{ p.name | jsonify }},"alternateName":{{ p.alternate_name | jsonify }},"givenName":{{ p.given_name | jsonify }},"familyName":{{ p.family_name | jsonify }},"jobTitle":{{ p.job_title | jsonify }},"description":{{ t.meta.description | jsonify }},"url":"https://olidroide.es/","image":{"@type":"ImageObject","url":"https://olidroide.es/assets/img/avatar.jpg","width":752,"height":752},"address":{"@type":"PostalAddress","addressLocality":"Madrid","addressCountry":"ES"},"knowsLanguage":["es","en"],"knowsAbout":{{ p.knows_about | jsonify }},"alumniOf":[{% for u in p.alumni_of %}{"@type":"CollegeOrUniversity","name":{{ u | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}],"hasOccupation":{"@type":"Occupation","name":{{ p.job_title | jsonify }},"skills":{{ p.knows_about | join: ", " | jsonify }}},"sameAs":{{ p.same_as | jsonify }}}
+]}
 </script>
 </head>
 <body>
@@ -103,6 +132,10 @@
       <div class="keys" id="keys" role="group" aria-label="{{ t.lab.keys_aria }}"></div>
       <div class="brand"><span>{{ t.lab.brand }}</span><small>{{ t.lab.brand_sub }}</small></div>
     </div>
+    <details class="stack">
+      <summary>{{ t.stack.summary }}</summary>
+      <dl>{% for g in t.stack.groups %}<dt>{{ g.name }}</dt><dd>{{ g.items }}</dd>{% endfor %}</dl>
+    </details>
   </section>
 
   <section id="bonus" class="bonus" data-world="{{ t.worlds.bonus }}">
