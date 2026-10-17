@@ -4,4 +4,5 @@ Landing personal de Oliver Mas (olidroide): portada estilo Amiga/Turrican II en 
 
 - Ver en local: `bundle install && bundle exec jekyll serve` (Ruby de `.tool-versions`).
 - Comprobar el sitio generado: `bundle exec jekyll build && python3 _tools/check_site.py`.
+- Tras cada despliegue, avisar a los buscadores: `python3 _tools/indexnow.py`.
 - La plantilla anterior (tema Serif de zerostatic) está en la etiqueta `legacy-serif-2022`.
